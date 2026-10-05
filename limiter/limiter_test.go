@@ -95,7 +95,7 @@ func TestSlidingWindowLimiter(t *testing.T) {
 	})
 
 	// 1. First 2 requests within window must pass.
-	for i := 0; i < 2; i++ {
+	for i := range 2 {
 		res, err := sw.Allow(ctx, key)
 
 		if err != nil {
